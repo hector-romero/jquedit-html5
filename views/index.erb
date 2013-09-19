@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8" />
+      <title><%= app_name %></title>
+      <!-- Hector Romero -->
+      <!-- hector22x@gmail.com -->
+      <!-- Version <%= app_version %> -->
+
+    <meta name="author" content="Hector Romero - hector22x@gmail.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no">
+
+
+    <%= stylesheet_tag main_css %>
+    <script type="text/javascript">
+
+        window.APP_VERSION = "<%= app_version %>";
+        var onLoad = function(){app.onLoad()}
+    </script>
+  </head>
+
+  <body onload='onLoad()'>
+    <div class="content"></div>
+    <%= javascript_tag main_js %>
+
+  </body>
+</html>

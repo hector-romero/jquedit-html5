@@ -1,0 +1,19 @@
+**.iml
+.idea
+build/
+*.tar.gz
+
+node_modules/*
+mobile-app/ios/www/assets/
+
+#Files to ignore found by googling
+*.DS_Store
+*.swp
+*~.nib
+*.lock
+profile
+DerivedData/
+xcuserdata
+xcuserdatad
+*.moved-aside
+*xcuserstate
