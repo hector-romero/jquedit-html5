@@ -1,7 +1,7 @@
 <h1>Selected file:</h1>
 <pre>
-    <code class="html fileRaw">
+    <code class="fileRaw">
         <!--<div class="html fileRaw"></div>-->
     </code>
 </pre>
-<input type="file" class="file">
+<input type="file" class="file"  accept="text/html,text/xml">

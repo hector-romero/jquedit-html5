@@ -5,6 +5,14 @@
 app.module 'views', (views) ->
 
   class FileHandler extends Backbone.View
+    _lastHTML: ''
+    interval: ''
+
+    validateChange: =>
+      current = @$el.html()
+      return if current == @_lastHTML
+      @_lastHTML = current
+      @trigger('change')
 
     setFile:(file) ->
       console.log "Setting file", file
@@ -24,7 +32,8 @@ app.module 'views', (views) ->
         @$el.html @fileResult.result
       else
         @$el.html '<!-- No file selected -->'
-      @trigger 'change'
+#      @_lastHTML = @$el.html()
+#      @trigger 'change'
 
     getRaw: ->
 #      escape = (value) ->
@@ -41,6 +50,17 @@ app.module 'views', (views) ->
 
     initialize: ->
       @render()
+      @interval = setInterval(@validateChange,100)
+      jquedit =(selector) =>
+        res = @$(selector)
+#        @trigger 'change'
+        res
+#        res.length
+#        res.html()
+
+      jQuery("iframe")[0].contentWindow.$ = jquedit
+      jQuery("iframe")[0].contentWindow.jquedit = jquedit
+
 
   class views.Application extends Backbone.View
     events:

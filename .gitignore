@@ -17,3 +17,5 @@ xcuserdata
 xcuserdatad
 *.moved-aside
 *xcuserstate
+
+jsconsole/
