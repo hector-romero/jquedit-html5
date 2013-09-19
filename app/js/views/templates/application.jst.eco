@@ -1,1 +1,7 @@
-<input type="file">
+<h1>Selected file:</h1>
+<pre>
+    <code class="html fileRaw">
+        <!--<div class="html fileRaw"></div>-->
+    </code>
+</pre>
+<input type="file" class="file">
